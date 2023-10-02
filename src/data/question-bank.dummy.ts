@@ -1,11 +1,12 @@
 import type { Question } from '~/models/question';
 import { v4 as uuidv4 } from 'uuid';
+import { format } from 'date-fns';
 
 const questions: Question[] = [
   {
     id: uuidv4(),
     content: 'Which is bigger?',
-    dateCreated: new Date().toDateString(),
+    dateCreated: format(new Date(), 'EEEE, dd MMMM yyyy hh:mm:ss'),
     options: [
       { id: uuidv4(), text: 'Cows', voteCount: 10 },
       { id: uuidv4(), text: 'Yak', voteCount: 0 },
@@ -15,7 +16,7 @@ const questions: Question[] = [
   {
     id: uuidv4(),
     content: 'How would you dress on your first date?',
-    dateCreated: new Date().toDateString(),
+    dateCreated: format(new Date(), 'EEEE, dd MMMM yyyy hh:mm:ss'),
     options: [
       {
         id: uuidv4(),
@@ -38,7 +39,7 @@ const questions: Question[] = [
   {
     id: uuidv4(),
     content: 'At what point should you have a gf?',
-    dateCreated: new Date().toDateString(),
+    dateCreated: format(new Date(), 'EEEE, dd MMMM yyyy hh:mm:ss'),
     options: [
       { id: uuidv4(), text: 'University', voteCount: 10 },
       { id: uuidv4(), text: 'Secondary school', voteCount: 25 },
@@ -47,7 +48,7 @@ const questions: Question[] = [
   {
     id: uuidv4(),
     content: 'Do you want to leave this country?',
-    dateCreated: new Date().toDateString(),
+    dateCreated: format(new Date(), 'EEEE, dd MMMM yyyy hh:mm:ss'),
     options: [
       {
         id: uuidv4(),
@@ -64,7 +65,7 @@ const questions: Question[] = [
   {
     id: uuidv4(),
     content: 'Thinking of what to eat?',
-    dateCreated: new Date().toDateString(),
+    dateCreated: format(new Date(), 'EEEE, dd MMMM yyyy hh:mm:ss'),
     options: [
       {
         id: uuidv4(),
